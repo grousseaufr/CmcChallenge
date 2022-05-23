@@ -5,7 +5,7 @@
 I used the "ASP.net core with Angular" project model in Visual Studio to generate the application.
 <br>
 <br>
-I used a clean architecture, composed of the 4 different projects.
+I used a clean architecture, composed of 4 different projects.
 For the sake of simplicity, the controllers are using directly repositories/entities defined in the Application Core (I could have wrapped the reposistories into services, and used some DTO's in between). I don't think it was useful here.
 <br>
 <br>
