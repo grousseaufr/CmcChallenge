@@ -1,0 +1,45 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">CmcChallenge</a>
+      <div *ngIf="countries">
+        <select
+          class="form-select"
+          [(ngModel)]="selectedCountry"
+          [compareWith]="compareFn"
+          (ngModelChange)="onCountryChange($event)"
+        >
+          <option *ngFor="let country of countries" [ngValue]="country">
+            {{ country.name + " (" + country.currencyCode + ")" }}
+          </option>
+        </select>
+      </div>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
+        [ngClass]="{ show: isExpanded }"
+      >
+        <ul class="navbar-nav flex-grow">
+          <li
+            class="nav-item"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="nav-link text-dark" [routerLink]="['/']">Product List</a>
+          </li>
+          <li
+            *ngIf="isViewCartLinkVisible"
+            class="nav-item"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="nav-link text-dark" [routerLink]="['/cart']"
+              >View Cart ({{ cartItemCount }})</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
