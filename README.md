@@ -30,7 +30,7 @@ I know I could have used some static lists, but I thought it was nice to include
 ### CmcChallenge.Application
 
 Holds the application services.
-The order service obviously would need to persist the order, but I think it was needed here.
+The orderService obviously would need to persist the order, but I think it was not needed here.
 
 ---
 
