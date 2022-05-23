@@ -2,7 +2,7 @@
 
 ## Architecture
 
-I used the "ASP.net core with Angular" project model in Visual Studio to generate the application.
+I used the "ASP.net core with Angular" project template in Visual Studio to generate the application.
 <br>
 <br>
 I used a clean architecture, composed of 4 different projects.
